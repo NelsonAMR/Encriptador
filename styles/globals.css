@@ -1,0 +1,34 @@
+:root {
+  /***** Typografi *****/
+  --primary-font: "Inter", sans-serif;
+
+  /***** Colors *****/
+  --white: #ffffff;
+  --dark-gray: #343a40;
+  --light-gray: #495057;
+  --dark-blue1: #0a3871;
+  --dark-blue2: #072b61;
+  --light-blue1: #f3f5fc;
+  --light-blue2: #eff1fa;
+  --light-blue3: #e9ecf8;
+
+  /***** Screen Sizes *****/
+  --mobile: 480px;
+  --tablet: 768px;
+  --laptop: 1024px;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  background-color: var(--light-blue1);
+  font-family: var(--primary-font);
+  color: var(--dark-gray);
+}
