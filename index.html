@@ -14,6 +14,29 @@
     <link rel="stylesheet" href="./styles/styles.css" />
   </head>
   <body>
-    <h1>Hola</h1>
+    <header>
+      <img src="./img/Vector.svg" alt="logo" />
+    </header>
+
+    <main>
+      <section class="input">
+        <textarea placeholder="Ingrese su mensaje" class="message"></textarea>
+        <div class="buttons">
+          <button class="btn_encrypt">Encriptar</button>
+          <button class="btn_desencrypt">Desencriptar</button>
+        </div>
+      </section>
+      <section class="output">
+        <h2>Ningun mensaje fue encontrado</h2>
+        <textarea
+          class="message"
+          placeholder="Ingresa el mensaje que deseas encriptar o desencriptar"
+          readonly
+        ></textarea>
+      </section>
+    </main>
+    <footer>
+      <p>Creado por Nelson Macias</p>
+    </footer>
   </body>
 </html>
