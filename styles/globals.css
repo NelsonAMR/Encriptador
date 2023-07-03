@@ -29,6 +29,42 @@
 html {
   box-sizing: border-box;
   background-color: var(--light-blue1);
+  font-size: 62.5%;
   font-family: var(--primary-font);
+}
+
+body {
+  font-size: 1.6rem;
   color: var(--dark-gray);
+}
+
+textarea,
+button {
+  border: none;
+  outline: none;
+  font-size: 1.6rem;
+  font-family: var(--primary-font);
+  width: 100%;
+}
+
+textarea {
+  padding: 1rem;
+}
+
+button {
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+}
+
+.container {
+  width: 95%;
+  margin-inline: auto;
+}
+
+@media (min-width: var(--tablet)) {
+  .container {
+    width: 90%;
+    max-width: 120rem;
+    margin-inline: auto;
+  }
 }
