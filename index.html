@@ -15,22 +15,26 @@
   </head>
   <body>
     <header class="container">
-      <img src="./img/Vector.svg" alt="logo" />
+      <img src="./img/Vector.svg" alt="logo" class="logo" />
     </header>
 
     <main class="container">
       <section class="input">
         <textarea placeholder="Ingrese su mensaje" class="message"></textarea>
+        <p class="input-info">
+          <img src="./img/exclametion.svg" alt="exclamation" /> Solo letras
+          minúsculas y sin acentos
+        </p>
         <div class="buttons">
-          <button class="btn_encrypt">Encriptar</button>
-          <button class="btn_desencrypt">Desencriptar</button>
+          <button class="btn-encrypt">Encriptar</button>
+          <button class="btn-desencrypt">Desencriptar</button>
         </div>
       </section>
       <section class="output">
         <h2>Ningun mensaje fue encontrado</h2>
         <textarea
           class="message"
-          placeholder="Ingresa el mensaje que deseas encriptar o desencriptar"
+          placeholder="Ingresa el mensaje que desees encriptar o desencriptar"
           readonly
         ></textarea>
       </section>

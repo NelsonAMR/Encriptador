@@ -36,6 +36,9 @@ html {
 body {
   font-size: 1.6rem;
   color: var(--dark-gray);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 textarea,
@@ -47,13 +50,9 @@ button {
   width: 100%;
 }
 
-textarea {
-  padding: 1rem;
-}
-
 button {
-  padding: 1rem 2rem;
-  border-radius: 1rem;
+  height: 6rem;
+  border-radius: 2rem;
 }
 
 .container {
@@ -65,6 +64,5 @@ button {
   .container {
     width: 90%;
     max-width: 120rem;
-    margin-inline: auto;
   }
 }
