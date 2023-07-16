@@ -1,6 +1,41 @@
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 1024px) {
+  body {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 9fr;
+    padding-block: 3rem;
+    gap: 2rem;
+  }
+}
+
 header {
   padding-top: 2rem;
   margin-bottom: 2rem;
+}
+
+@media (min-width: 1024px) {
+  header {
+    display: flex;
+    align-items: start;
+    justify-content: end;
+  }
+
+  main {
+    display: grid;
+    grid-template-columns: 5fr 2fr;
+    height: 100%;
+    gap: 4rem;
+  }
+
+  .input {
+    padding-top: 10rem;
+    height: 100%;
+  }
 }
 
 .input > .message {
@@ -16,6 +51,12 @@ header {
   color: var(--dark-blue1);
 }
 
+@media (min-width: 1024px) {
+  .input > .message {
+    height: 60vh;
+  }
+}
+
 .input-info {
   display: flex;
   align-items: center;
@@ -29,23 +70,41 @@ header {
   margin-block: 2rem;
 }
 
+@media (min-width: 768px) {
+  .buttons {
+    flex-direction: row;
+  }
+}
+
 .btn-encrypt {
   background-color: var(--dark-blue1);
   color: var(--white);
+  transition: background-color 150ms;
 }
 
 .btn-desencrypt {
   background-color: inherit;
   border: 0.1rem solid var(--dark-blue1);
   color: var(--dark-blue1);
+  transition: background-color 150ms;
+}
+
+@media (min-width: 1024px) {
+  .btn-encrypt:hover {
+    background-color: var(--dark-blue2);
+  }
+
+  .btn-desencrypt:hover {
+    background-color: var(--light-blue3);
+  }
 }
 
 .output {
   text-align: center;
   margin-top: 4rem;
   background-color: var(--white);
-  padding: 3rem;
-  border-radius: 3rem;
+  padding: 2rem;
+  border-radius: 2rem;
   margin-bottom: 4rem;
   width: 90%;
   margin-inline: auto;
@@ -55,6 +114,34 @@ header {
 .output > .message {
   margin-top: 2rem;
   text-align: center;
+}
+
+@media (min-width: 1024px) {
+  .output {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+    height: 100%;
+  }
+
+  .output > .message {
+    height: 100%;
+  }
+}
+
+.btn-clear {
+  background-color: transparent;
+  border: 1px solid var(--dark-blue1);
+  color: var(--dark-blue1);
+  transition: background-color 150ms;
+}
+
+@media (min-width: 1024px) {
+  .btn-clear:hover {
+    background-color: var(--light-blue3);
+  }
 }
 
 footer {
