@@ -156,6 +156,10 @@ header {
     display: block;
   }
 
+  .output > img.hidden {
+    display: none;
+  }
+
   .output > .message {
     height: 100%;
   }

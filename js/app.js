@@ -6,6 +6,7 @@ const output = document.getElementById("msg-output");
 const btnEncrypt = document.getElementById("btn-encrypt");
 const btnDecrypt = document.getElementById("btn-desencrypt");
 const btnCopy = document.querySelector(".btn-copy");
+const outputImg = document.querySelector(".output > img");
 const outputH2 = document.querySelector(".output > h2");
 const info = document.querySelector(".input-info");
 
@@ -24,6 +25,7 @@ function btnEncryptClick() {
   if (validation(message)) {
     info.classList.remove("error");
     outputH2.classList.add("hidden");
+    outputImg.classList.add("hidden");
     output.value = encrypt(message);
     btnCopy.classList.add("show");
   } else {
@@ -35,6 +37,7 @@ function btnDecryptClick() {
   if (validation(message)) {
     info.classList.remove("error");
     outputH2.classList.add("hidden");
+    outputImg.classList.add("hidden");
     output.value = decrypt(message);
     btnCopy.classList.add("show");
   } else {
