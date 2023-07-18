@@ -20,14 +20,20 @@
 
     <main class="container">
       <section class="input">
-        <textarea placeholder="Ingrese su mensaje" class="message"></textarea>
+        <textarea
+          placeholder="Ingrese su mensaje"
+          class="message"
+          id="msg-input"
+        ></textarea>
         <p class="input-info">
           <img src="./img/exclametion.svg" alt="exclamation" /> Solo letras
           minúsculas y sin acentos
         </p>
         <div class="buttons">
-          <button class="btn-encrypt">Encriptar</button>
-          <button class="btn-desencrypt">Desencriptar</button>
+          <button class="btn-encrypt" id="btn-encrypt">Encriptar</button>
+          <button class="btn-desencrypt" id="btn-desencrypt">
+            Desencriptar
+          </button>
         </div>
       </section>
 
@@ -38,9 +44,12 @@
           class="message"
           placeholder="Ingresa el mensaje que desees encriptar o desencriptar"
           readonly
+          id="msg-output"
         ></textarea>
         <button class="btn-copy">Copiar</button>
       </section>
     </main>
+
+    <script src="./js/app.js" type="module"></script>
   </body>
 </html>

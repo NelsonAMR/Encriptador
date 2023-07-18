@@ -47,6 +47,8 @@ header {
   height: 33vh;
   font-size: 3rem;
   color: var(--dark-blue1);
+  margin-bottom: 1rem;
+  resize: none;
 }
 
 .input > .message::placeholder {
@@ -64,6 +66,17 @@ header {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+}
+
+.input-info.error {
+  color: var(--red);
+
+  -webkit-animation-name: shake;
+  animation-name: shake;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
 }
 
 .buttons {
@@ -123,6 +136,10 @@ header {
   text-align: center;
 }
 
+.output > h2.hidden {
+  display: none;
+}
+
 @media (min-width: 1024px) {
   .output {
     display: flex;
@@ -145,10 +162,16 @@ header {
 }
 
 .btn-copy {
+  display: none;
+  margin-top: 2rem;
   background-color: transparent;
   border: 1px solid var(--dark-blue1);
   color: var(--dark-blue1);
   transition: background-color 150ms;
+}
+
+.btn-copy.show {
+  display: block;
 }
 
 @media (min-width: 1024px) {
@@ -161,4 +184,49 @@ footer {
   margin-top: auto;
   text-align: center;
   margin-bottom: 2rem;
+}
+
+@-webkit-keyframes shake {
+  0%,
+  100% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    -webkit-transform: translate3d(-10px, 0, 0);
+    transform: translate3d(-10px, 0, 0);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    -webkit-transform: translate3d(10px, 0, 0);
+    transform: translate3d(10px, 0, 0);
+  }
+}
+@keyframes shake {
+  0%,
+  100% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    -webkit-transform: translate3d(-10px, 0, 0);
+    transform: translate3d(-10px, 0, 0);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    -webkit-transform: translate3d(10px, 0, 0);
+    transform: translate3d(10px, 0, 0);
+  }
 }
