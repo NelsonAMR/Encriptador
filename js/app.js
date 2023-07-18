@@ -14,6 +14,7 @@ let message = "";
 input.addEventListener("change", inputChange);
 btnEncrypt.addEventListener("click", btnEncryptClick);
 btnDecrypt.addEventListener("click", btnDecryptClick);
+btnCopy.addEventListener("click", copy);
 
 function inputChange(event) {
   message = event.target.value;
@@ -39,4 +40,13 @@ function btnDecryptClick() {
   } else {
     info.classList.add("error");
   }
+}
+
+function copy() {
+  output.select();
+  output.setSelectionRange(0, 99999);
+
+  navigator.clipboard.writeText(output.value);
+
+  alert("Texto copiado");
 }
